@@ -12,7 +12,7 @@ run.addEventListener('click',function(){
   socket.emit('code',{
     code:editor.getValue()
   })
-})
+});
 
 socket.on('code',function(){
 window.open('work.html');
