@@ -4,7 +4,7 @@ let editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
   lineNumbers: true,
   theme: "blackboard"
 });
-let socket = io.connect('');
+let socket = io.connect();
 let play=document.getElementById('play');
 let link=document.getElementById('link');
 
