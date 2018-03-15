@@ -7,6 +7,16 @@ let editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
 let socket = io.connect();
 let play=document.getElementById('play');
 let link=document.getElementById('link');
+let run=document.getElementById('run');
+run.addEventListener('click',function(){
+  socket.emit('code',{
+    code:editor.getValue()
+  })
+})
+
+socket.on('code',function(){
+window.open('temp.html');
+});
 
 
 

@@ -13,6 +13,19 @@ io.sockets.on('connection', function (socket) {
     socket.on('url',function(data){
          io.sockets.emit('url',data)
          console.log(data);
+    socket.on('code',function(data){
+            console.log(data);
+            fs.writeFile('./public/temp.html', data.code, function(err, data){
+            if (err) console.log(err);
+            console.log("Successfully Written to File.");
+            io.sockets.emit('code',data);
+            
+    });
+        });
+
+
+
+
      });
 socks.push(socket);
 socket.emit('refresh', {body: body});
