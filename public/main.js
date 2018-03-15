@@ -15,7 +15,7 @@ run.addEventListener('click',function(){
 })
 
 socket.on('code',function(){
-window.open('temp.html');
+window.open('work.html');
 });
 
 

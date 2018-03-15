@@ -15,7 +15,7 @@ io.sockets.on('connection', function (socket) {
          console.log(data);
     socket.on('code',function(data){
             console.log(data);
-            fs.writeFile('./public/temp.html', data.code, function(err, data){
+            fs.writeFile('./public/work.html', data.code, function(err, data){
             if (err) console.log(err);
             console.log("Successfully Written to File.");
             io.sockets.emit('code',data);
