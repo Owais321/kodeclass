@@ -1,7 +1,7 @@
 const express=require('express');
 let socket=require('socket.io')
 const app=express();
-let server=app.listen(3000,function(){
+let server=app.listen(process.env.PORT||3000,function(){
     console.log('listening');
 });
 //static files
