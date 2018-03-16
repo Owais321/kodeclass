@@ -1,19 +1,25 @@
+//require
 const express = require('express');
 let socket = require('socket.io')
 let fs = require('fs');
 const app = express();
-const url='urldefined'
-app.post('localhost:3000',(req,res,next)=>{
-    console.log(res);
-});
 let server = app.listen(process.env.PORT || 3000, function () {
     console.log('listening');
 });
+//opening file that run code
 app.get('/test',(req,res)=>{
-    res.sendFile(__dirname+'/public/files/work.html')
+    res.sendFile(__dirname+'/public/files/work.html');
+    
+});
+//download files
+app.get('/download',(req,res)=>{
+    console.log("TEST");
+    filename=__dirname+'/public/files/work.html'
+    res.download(filename);
 });
 //static files
 app.use(express.static('public'));
+//sockets
 var io = socket(server);
 var socks = [];
 var body = "function test(){ \n console.log('test'); \n }";
