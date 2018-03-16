@@ -11,7 +11,7 @@ let server = app.listen(process.env.PORT || 3000, function () {
 });
 app.get('/test',(req,res)=>{
     res.sendFile(__dirname+'/public/files/work.html')
-})
+});
 //static files
 app.use(express.static('public'));
 var io = socket(server);

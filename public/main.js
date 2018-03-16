@@ -11,26 +11,9 @@ run.addEventListener('click', function () {
   socket.emit('code', {
     code: editor.getValue()
   });
-
-  
-//   axios({
-//     method:'post',
-//     url:'http://localhost:3000',
-//     //action:'http://localhost:3000/test',
-//     data:{
-//       code:editor.getValue()
-//     },
-//     headers:{
-//         'Access-Control-Allow-Origin':'http://localhost:3000'
-//     }
-// }).then((response)=>{
-//     console.log(response);
-// }).catch((err)=>{
-//     console.log(err);
-// })
 });
 socket.on('code', function () {
-  document.location='http://coolcodeedit.herokuapp.com/test';
+  window.open('http://coolcodeedit.herokuapp.com/test',"_blank");
 });
 function createYouTubeEmbedLink(link) {
   embed = link.replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/");
