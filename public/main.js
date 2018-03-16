@@ -12,7 +12,7 @@ let run = document.getElementById('run');
 let download = document.getElementById('download');
 //when click on download
 download.addEventListener('click', function () {
-  window.open("http://coolcodeedit/herokuapp.com/download");
+  window.open("http://coolcodeedit.herokuapp.com/download");
 });
 //when click on run
 run.addEventListener('click', function () {
@@ -21,7 +21,7 @@ run.addEventListener('click', function () {
   });
   
 
-  window.open('http://coolcodeedit/herokuapp.com/test');
+  window.open('http://coolcodeedit.herokuapp.com/test');
   
 });
 //converting video into embeded link so that we can embed in modal
