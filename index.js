@@ -17,6 +17,19 @@ app.get('/download',(req,res)=>{
     filename=__dirname+'/public/files/work.html'
     res.download(filename);
 });
+app.get('/',(req,res)=>{
+res.sendFile(__dirname+'/public/index.html')
+});
+app.get('/candy',(req,res)=>{
+    res.sendFile(__dirname+'/public/index.html')
+    });
+app.get('/bunty',(req,res)=>{
+    res.sendFile(__dirname+'/public/index.html')
+    });
+app.get('cake',(req,res)=>{
+    res.sendFile(__dirname+'/public/index.html')
+    });
+
 //static files
 app.use(express.static('public'));
 //sockets
