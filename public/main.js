@@ -12,7 +12,7 @@ let run = document.getElementById('run');
 let download = document.getElementById('download');
 //when click on download
 download.addEventListener('click', function () {
-  window.open("http://coolcodeedit.herokuapp.com/download");
+  window.open("http://localhost:3000/download");
 });
 //when click on run
 run.addEventListener('click', function () {
@@ -21,7 +21,7 @@ run.addEventListener('click', function () {
   });
   
 
-  window.open('http://coolcodeedit.herokuapp.com/test');
+  window.open('http://localhost:3000/test');
   
 });
 //converting video into embeded link so that we can embed in modal
@@ -53,7 +53,7 @@ socket.on('url', function (data) {
   $('.video').click();
 });
 socket.on('refresh', function (data) {
-  editor.setValue(data.body);
+  editor.setValue(data.body); 
 });
 socket.on('change', function (data) {
   console.log(data);
